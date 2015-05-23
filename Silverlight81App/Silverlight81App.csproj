@@ -140,9 +140,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="ADMailSDK.DLL">
-      <HintPath>..\Debug\ADMailSDK.DLL\ADMailSDK.DLL.winmd</HintPath>
-    </Reference>
+    <ProjectReference Include="..\ADMailSDK.DLL\ADMailSDK.DLL.vcxproj">
+      <Project>{0c6e7be6-076e-4ab8-b86d-666120f5eb49}</Project>
+      <Name>ADMailSDK.DLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
