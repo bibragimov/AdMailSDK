@@ -3,7 +3,7 @@
 namespace MyTargetSDK.JSONModels
 {
     [DataContract]
-    internal enum NavigationType
+    internal enum NavigationTypeEnum
     {
         [EnumMember(Value = "")] Unknown,
 

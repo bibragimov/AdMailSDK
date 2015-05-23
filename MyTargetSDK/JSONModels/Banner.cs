@@ -55,6 +55,9 @@ namespace MyTargetSDK.JSONModels
         public float ImageWidth { get; set; }
 
         [DataMember]
+        public NavigationTypeEnum NavigationType { get; set; }
+
+        [DataMember]
         public float Raiting { get; set; }
 
         [DataMember]
@@ -73,6 +76,6 @@ namespace MyTargetSDK.JSONModels
         public Uri UrlScheme { get; set; }
 
         [DataMember]
-        private ulong Votes { get; set; }
+        public ulong Votes { get; set; }
     }
 }

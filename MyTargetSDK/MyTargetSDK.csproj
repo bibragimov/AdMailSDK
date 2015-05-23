@@ -37,16 +37,20 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="JSONModels\Advertisement.cs" />
     <Compile Include="JSONModels\Banner.cs" />
     <Compile Include="JSONModels\CategoryEnum.cs" />
-    <Compile Include="JSONModels\NavigationType.cs" />
+    <Compile Include="JSONModels\NavigationTypeEnum.cs" />
     <Compile Include="JSONModels\Response.cs" />
     <Compile Include="JSONModels\Settings.cs" />
     <Compile Include="JSONModels\SubcategoryEnum.cs" />
     <Compile Include="JSONModels\TypeEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\AppBannerViewModel.cs" />
+    <Compile Include="ViewModel\ABCBannerViewModel.cs" />
+    <Compile Include="ViewModel\BannerViewModelFactory.cs" />
+    <Compile Include="ViewModel\IBannerViewModel.cs" />
+    <Compile Include="ViewModel\WebBannerViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
