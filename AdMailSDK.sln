@@ -7,6 +7,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ADMailSDK.DLL", "ADMailSDK.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightApp", "SilverlightApp\SilverlightApp.csproj", "{592D9E81-0D79-4C61-BC60-F656B14EBBB8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silverlight81App", "Silverlight81App\Silverlight81App.csproj", "{69ED9DDC-5035-4ABA-A243-1C814585F149}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dll1", "Dll1\Dll1.vcxproj", "{E8900023-3C9F-4220-92EB-822AEDD9F1FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -35,6 +39,26 @@ Global
 		{592D9E81-0D79-4C61-BC60-F656B14EBBB8}.Release|Win32.ActiveCfg = Release|x86
 		{592D9E81-0D79-4C61-BC60-F656B14EBBB8}.Release|Win32.Build.0 = Release|x86
 		{592D9E81-0D79-4C61-BC60-F656B14EBBB8}.Release|Win32.Deploy.0 = Release|x86
+		{69ED9DDC-5035-4ABA-A243-1C814585F149}.Debug|ARM.ActiveCfg = Debug|ARM
+		{69ED9DDC-5035-4ABA-A243-1C814585F149}.Debug|ARM.Build.0 = Debug|ARM
+		{69ED9DDC-5035-4ABA-A243-1C814585F149}.Debug|ARM.Deploy.0 = Debug|ARM
+		{69ED9DDC-5035-4ABA-A243-1C814585F149}.Debug|Win32.ActiveCfg = Debug|x86
+		{69ED9DDC-5035-4ABA-A243-1C814585F149}.Debug|Win32.Build.0 = Debug|x86
+		{69ED9DDC-5035-4ABA-A243-1C814585F149}.Debug|Win32.Deploy.0 = Debug|x86
+		{69ED9DDC-5035-4ABA-A243-1C814585F149}.Release|ARM.ActiveCfg = Release|ARM
+		{69ED9DDC-5035-4ABA-A243-1C814585F149}.Release|ARM.Build.0 = Release|ARM
+		{69ED9DDC-5035-4ABA-A243-1C814585F149}.Release|ARM.Deploy.0 = Release|ARM
+		{69ED9DDC-5035-4ABA-A243-1C814585F149}.Release|Win32.ActiveCfg = Release|x86
+		{69ED9DDC-5035-4ABA-A243-1C814585F149}.Release|Win32.Build.0 = Release|x86
+		{69ED9DDC-5035-4ABA-A243-1C814585F149}.Release|Win32.Deploy.0 = Release|x86
+		{E8900023-3C9F-4220-92EB-822AEDD9F1FE}.Debug|ARM.ActiveCfg = Debug|ARM
+		{E8900023-3C9F-4220-92EB-822AEDD9F1FE}.Debug|ARM.Build.0 = Debug|ARM
+		{E8900023-3C9F-4220-92EB-822AEDD9F1FE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E8900023-3C9F-4220-92EB-822AEDD9F1FE}.Debug|Win32.Build.0 = Debug|Win32
+		{E8900023-3C9F-4220-92EB-822AEDD9F1FE}.Release|ARM.ActiveCfg = Release|ARM
+		{E8900023-3C9F-4220-92EB-822AEDD9F1FE}.Release|ARM.Build.0 = Release|ARM
+		{E8900023-3C9F-4220-92EB-822AEDD9F1FE}.Release|Win32.ActiveCfg = Release|Win32
+		{E8900023-3C9F-4220-92EB-822AEDD9F1FE}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

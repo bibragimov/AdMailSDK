@@ -14,6 +14,8 @@ namespace ADMailSDK
 		interface IADService : IInspectable
 		{
 			HRESULT GetInt([out, retval]INT32* result);
+
+			HRESULT ShowSomeText();
 		};
 
 		[version(1.0)]
