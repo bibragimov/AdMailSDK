@@ -1,0 +1,29 @@
+import "inspectable.idl";
+
+namespace ADMailSDK
+{
+	namespace DLL
+	{
+		interface IADService;
+
+		runtimeclass ADService;
+
+		[version(1.0)]
+		[exclusiveto(ADService)]
+		[uuid(79f404a2-7dc3-47ed-a739-65da9f5211b8)]
+		interface IADService : IInspectable
+		{
+			HRESULT GetInt([out, retval]INT32* result);
+		};
+
+		[version(1.0)]
+		[activatable(1.0)]
+		[marshaling_behavior(agile)]
+		[threading(both)]
+		runtimeclass ADService
+		{
+			[default]
+			interface ADMailSDK.DLL.IADService;
+		};
+	}
+}
