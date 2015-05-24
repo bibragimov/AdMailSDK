@@ -9,12 +9,12 @@ namespace MyTargetSDK.ViewModel
                                   string title,
                                   Uri icon,
                                   string description,
-                                  Uri domain)
+                                  string domain)
             : base(ageRestrictions, advertisingLabel, title, icon, description)
         {
             Domain = domain;
         }
 
-        public Uri Domain { get; private set; }
+        public string Domain { get; private set; }
     }
 }

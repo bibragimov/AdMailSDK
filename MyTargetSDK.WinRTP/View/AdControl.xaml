@@ -1,0 +1,228 @@
+﻿<ContentPresenter x:Class="MyTargetSDK.WinRTP.View.AdControl"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:viewModel="using:MyTargetSDK.ViewModel"
+                  mc:Ignorable="d">
+    <ContentPresenter.Resources>
+        <DataTemplate x:Name="WebAd">
+            <Border HorizontalAlignment="Stretch"
+                    Background="White"
+                    BorderBrush="#AAAAAA"
+                    BorderThickness="0,0,0,1"
+                    CornerRadius="0,0,15, 15"
+                    Padding="10"
+                    d:DataContext="{d:DesignInstance Type=viewModel:WebBannerViewModel}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <!--  Header  -->
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35" />
+                            <ColumnDefinition Width="10" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--  Age restrictions  -->
+                        <Border Grid.Column="0"
+                                BorderBrush="#AAAAAA"
+                                BorderThickness="1"
+                                Padding="3,1">
+                            <TextBlock FontSize="16"
+                                       Foreground="#AAAAAA"
+                                       Text="{Binding AgeRestrictions,
+                                                      Mode=OneTime}" />
+                        </Border>
+
+                        <!--  Label  -->
+                        <TextBlock Grid.Column="2"
+                                   VerticalAlignment="Bottom"
+                                   FontSize="16"
+                                   Foreground="#AAAAAA"
+                                   Text="{Binding AdvertisingLabel,
+                                                  Mode=OneTime}" />
+                    </Grid>
+
+                    <!--  Body  -->
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60" />
+                            <ColumnDefinition Width="10" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--  Icon  -->
+                        <Image Width="60"
+                               Height="60"
+                               VerticalAlignment="Top"
+                               Source="{Binding Icon,
+                                                Mode=OneTime}" />
+
+                        <!--  Info  -->
+                        <Grid Grid.Column="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="28" />
+                                <RowDefinition Height="24" />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                            <!--  Label  -->
+                            <TextBlock Grid.Row="0"
+                                       FontSize="18"
+                                       FontWeight="Bold"
+                                       Foreground="#000000"
+                                       Text="{Binding Title,
+                                                      Mode=OneTime}"
+                                       TextWrapping="NoWrap" />
+
+                            <!--  Domain  -->
+                            <TextBlock Grid.Row="1"
+                                       FontSize="16"
+                                       Foreground="#BBBBBB"
+                                       Text="{Binding Domain,
+                                                      Mode=OneTime}" />
+
+                            <!--  Description  -->
+                            <TextBlock Grid.Row="2"
+                                       FontSize="16"
+                                       Foreground="#000000"
+                                       Text="{Binding Description,
+                                                      Mode=OneTime}"
+                                       TextWrapping="Wrap" />
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Border>
+        </DataTemplate>
+        <DataTemplate x:Name="AppAd">
+            <Border HorizontalAlignment="Stretch"
+                    Background="White"
+                    BorderBrush="#AAAAAA"
+                    BorderThickness="0,0,0,1"
+                    CornerRadius="0,0,15, 15"
+                    Padding="10"
+                    d:DataContext="{d:DesignInstance Type=viewModel:AppBannerViewModel}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <!--  Header  -->
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35" />
+                            <ColumnDefinition Width="10" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--  Age restrictions  -->
+                        <Border Grid.Column="0"
+                                BorderBrush="#AAAAAA"
+                                BorderThickness="1"
+                                Padding="3,1">
+                            <TextBlock FontSize="16"
+                                       Foreground="#AAAAAA"
+                                       Text="{Binding AgeRestrictions,
+                                                      Mode=OneTime}" />
+                        </Border>
+
+                        <!--  Label  -->
+                        <TextBlock Grid.Column="2"
+                                   VerticalAlignment="Bottom"
+                                   FontSize="16"
+                                   Foreground="#AAAAAA"
+                                   Text="{Binding AdvertisingLabel,
+                                                  Mode=OneTime}" />
+                    </Grid>
+
+                    <!--  Body  -->
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60" />
+                            <ColumnDefinition Width="10" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--  Icon  -->
+                        <Image Width="60"
+                               Height="60"
+                               VerticalAlignment="Top"
+                               Source="{Binding Icon,
+                                                Mode=OneTime}" />
+
+                        <!--  Info  -->
+                        <Grid Grid.Column="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="28" />
+                                <RowDefinition Height="24" />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                            <!--  Label  -->
+                            <TextBlock Grid.Row="0"
+                                       FontSize="18"
+                                       FontWeight="Bold"
+                                       Foreground="#000000"
+                                       Text="{Binding Title,
+                                                      Mode=OneTime}"
+                                       TextWrapping="NoWrap" />
+
+                            <!--  Rating  -->
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="90" />
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <Grid>
+                                    <Path Width="Auto"
+                                          Height="Auto"
+                                          HorizontalAlignment="Left"
+                                          VerticalAlignment="Center"
+                                          Data="M -1346.6,-259.247L -1358.76,-305.451L -1321.61,-335.489L -1369.31,-338.197L -1386.39,-382.816L -1403.71,-338.285L -1451.43,-335.823L -1414.43,-305.594L -1426.83,-259.454L -1386.65,-285.302L -1346.6,-259.247 Z M -1067.9,-259.247L -1080.07,-305.451L -1042.91,-335.489L -1090.61,-338.197L -1107.7,-382.816L -1125.01,-338.285L -1172.73,-335.823L -1135.73,-305.594L -1148.13,-259.453L -1107.95,-285.301L -1067.9,-259.247 Z M -1207.25,-259.247L -1219.41,-305.451L -1182.26,-335.489L -1229.96,-338.197L -1247.05,-382.816L -1264.36,-338.285L -1312.08,-335.823L -1275.08,-305.594L -1287.48,-259.453L -1247.3,-285.301L -1207.25,-259.247 Z M -928.552,-259.247L -940.718,-305.451L -903.562,-335.489L -951.264,-338.197L -968.35,-382.816L -985.666,-338.285L -1033.38,-335.823L -996.382,-305.594L -1008.79,-259.453L -968.602,-285.301L -928.552,-259.247 Z M -789.204,-259.247L -801.369,-305.451L -764.214,-335.489L -811.916,-338.197L -829.002,-382.816L -846.318,-338.285L -894.034,-335.823L -857.033,-305.594L -869.437,-259.453L -829.254,-285.301L -789.204,-259.247 Z "
+                                          Stretch="Uniform"
+                                          UseLayoutRounding="False">
+                                        <Path.Fill>
+                                            <LinearGradientBrush>
+                                                <GradientStop Offset="0" Color="#AAAAAA" />
+                                                <GradientStop Offset="{Binding Rating, Mode=OneTime}" Color="#AAAAAA" />
+                                                <GradientStop Offset="{Binding Rating, Mode=OneTime}" Color="#EEEEEE" />
+                                                <GradientStop Offset="1" Color="#EEEEEE" />
+                                            </LinearGradientBrush>
+                                        </Path.Fill>
+                                    </Path>
+                                </Grid>
+
+                                <!--  Votes  -->
+                                <TextBlock Grid.Column="2"
+                                           VerticalAlignment="Bottom"
+                                           FontSize="16"
+                                           Foreground="#BBBBBB"
+                                           Text="{Binding Votes,
+                                                          Mode=OneTime}" />
+                            </Grid>
+
+                            <!--  Description  -->
+                            <TextBlock Grid.Row="2"
+                                       FontSize="16"
+                                       Foreground="#000000"
+                                       Text="{Binding Description,
+                                                      Mode=OneTime}"
+                                       TextWrapping="Wrap" />
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Border>
+        </DataTemplate>
+        <DataTemplate x:Name="Empty" />
+    </ContentPresenter.Resources>
+</ContentPresenter>

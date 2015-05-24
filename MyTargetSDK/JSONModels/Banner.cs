@@ -28,7 +28,7 @@ namespace MyTargetSDK.JSONModels
         public string Disclaimer { get; set; }
 
         [DataMember]
-        public Uri Domain { get; set; }
+        public string Domain { get; set; }
 
         [DataMember(Name = "extern_id")]
         public string ExternId { get; set; }
