@@ -6,7 +6,7 @@ using MyTargetSDK.ViewModel;
 
 namespace MyTargetSDK.Infrastructure
 {
-    internal static class BannerViewModelFactory
+    public static class BannerViewModelFactory
     {
         private static IBannerViewModel Create(string advertisingLabel, Banner model)
         {
@@ -39,7 +39,7 @@ namespace MyTargetSDK.Infrastructure
                              .Retry()
                              .Select(response =>
                                      {
-                                         var ad = response.NativeAds.FirstOrDefault();
+                                         var ad = response.NativeAds;
                                          if (ad == null)
                                              return null;
 

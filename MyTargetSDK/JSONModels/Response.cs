@@ -6,6 +6,6 @@ namespace MyTargetSDK.JSONModels
     internal sealed class Response
     {
         [DataMember]
-        public Advertisement[] NativeAds { get; set; }
+        public Advertisement NativeAds { get; set; }
     }
 }

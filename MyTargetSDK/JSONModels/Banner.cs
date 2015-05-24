@@ -31,7 +31,7 @@ namespace MyTargetSDK.JSONModels
         public Uri Domain { get; set; }
 
         [DataMember(Name = "extern_id")]
-        public long ExternId { get; set; }
+        public string ExternId { get; set; }
 
         [DataMember]
         public Uri FinalLink { get; set; }

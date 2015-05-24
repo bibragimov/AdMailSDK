@@ -2,7 +2,7 @@
 
 namespace MyTargetSDK.ViewModel
 {
-    internal interface IBannerViewModel
+    public interface IBannerViewModel
     {
         string AgeRestrictions { get; }
         string AdvertisingLabel { get; }

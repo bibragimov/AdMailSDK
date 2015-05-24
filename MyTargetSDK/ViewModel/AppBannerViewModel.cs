@@ -2,7 +2,7 @@
 
 namespace MyTargetSDK.ViewModel
 {
-    internal sealed class AppBannerViewModel : ABCBannerViewModel
+    public sealed class AppBannerViewModel : ABCBannerViewModel
     {
         public AppBannerViewModel(string ageRestrictions,
                                   string advertisingLabel,

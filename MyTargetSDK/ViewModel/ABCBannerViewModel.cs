@@ -2,7 +2,7 @@
 
 namespace MyTargetSDK.ViewModel
 {
-    internal abstract class ABCBannerViewModel : IBannerViewModel
+    public abstract class ABCBannerViewModel : IBannerViewModel
     {
         protected ABCBannerViewModel(string ageRestrictions,
                                      string advertisingLabel,
