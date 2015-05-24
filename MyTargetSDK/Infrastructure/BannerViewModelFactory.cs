@@ -18,7 +18,7 @@ namespace MyTargetSDK.Infrastructure
                                                   model.Title,
                                                   model.IconLink,
                                                   model.Description,
-                                                  model.Raiting,
+                                                  model.Rating,
                                                   model.Votes);
                 case NavigationTypeEnum.Web:
                     return new WebBannerViewModel(model.AgeRestrictions,

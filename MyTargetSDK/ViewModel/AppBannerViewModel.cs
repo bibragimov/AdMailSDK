@@ -9,16 +9,15 @@ namespace MyTargetSDK.ViewModel
                                   string title,
                                   Uri icon,
                                   string description,
-                                  float raiting,
+                                  float rating,
                                   ulong votes)
             : base(ageRestrictions, advertisingLabel, title, icon, description)
         {
-            Raiting = raiting;
+            Rating = rating/5;
             Votes = votes;
         }
 
-        public Single Raiting { get; private set; }
-
-        public UInt64 Votes { get; private set; }
+        public float Rating { get; private set; }
+        public ulong Votes { get; private set; }
     }
 }

@@ -58,7 +58,7 @@ namespace MyTargetSDK.JSONModels
         public NavigationTypeEnum NavigationType { get; set; }
 
         [DataMember]
-        public float Raiting { get; set; }
+        public float Rating { get; set; }
 
         [DataMember]
         public SubcategoryEnum Subcategory { get; set; }
