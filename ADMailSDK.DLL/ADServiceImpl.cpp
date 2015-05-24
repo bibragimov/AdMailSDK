@@ -63,11 +63,17 @@ namespace ABI
 					Windows::Foundation::Rect boundsRect;
 					hr = coreWindow->get_Bounds(&boundsRect);
 
-					UINT creationFlags = D3D11_CREATE_DEVICE_BGRA_SUPPORT;
+
+					UINT creationFlags = D3D11_CREATE_DEVICE_BGRA_SUPPORT | D3D11_CREATE_DEVICE_DEBUG;
 
 					D3D_FEATURE_LEVEL featureLevels[] =
 					{
-						D3D_FEATURE_LEVEL_9_3
+						D3D_FEATURE_LEVEL_11_1,
+						D3D_FEATURE_LEVEL_11_0,
+						D3D_FEATURE_LEVEL_10_1,
+						D3D_FEATURE_LEVEL_10_0,
+						D3D_FEATURE_LEVEL_9_3,
+						D3D_FEATURE_LEVEL_9_1
 					};
 
 					ComPtr<ID3D11Device> device;
@@ -78,7 +84,7 @@ namespace ABI
 					hr = D3D11CreateDevice(
 						nullptr,                    // specify null to use the default adapter
 						D3D_DRIVER_TYPE_HARDWARE,
-						0,
+						nullptr,
 						creationFlags,              // optionally set debug and Direct2D compatibility flags
 						featureLevels,              // list of feature levels this app can support
 						ARRAYSIZE(featureLevels),   // number of possible feature levels
@@ -88,8 +94,10 @@ namespace ABI
 						&context                    // returns the device immediate context
 						);
 
-					ComPtr<IDXGIDevice1> dxgiDevice;
+					ComPtr<IDXGIDevice2> dxgiDevice;
 					hr = device.As(&dxgiDevice);
+					
+					dxgiDevice->SetMaximumFrameLatency(1);
 
 					ComPtr<IDXGIAdapter> dxgiAdapter;
 					hr = dxgiDevice->GetAdapter(&dxgiAdapter);
@@ -98,17 +106,17 @@ namespace ABI
 					hr = dxgiAdapter->GetParent(__uuidof(IDXGIFactory2), &dxgiFactory);
 
 					DXGI_SWAP_CHAIN_DESC1 swapChainDesc = { 0 };
-					swapChainDesc.Width = static_cast<UINT>(boundsRect.Width); 
-					swapChainDesc.Height = static_cast<UINT>(boundsRect.Height);
-					swapChainDesc.Format = DXGI_FORMAT_B8G8R8A8_UNORM; 
 					swapChainDesc.Stereo = false;
-					swapChainDesc.SampleDesc.Count = 1; 
-					swapChainDesc.SampleDesc.Quality = 0;
 					swapChainDesc.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
-					swapChainDesc.BufferCount = 1; 
-					swapChainDesc.Scaling = DXGI_SCALING_STRETCH; 
-					swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_DISCARD; 
+					swapChainDesc.Scaling = DXGI_SCALING_NONE;
 					swapChainDesc.Flags = 0;
+					swapChainDesc.Width = 0;
+					swapChainDesc.Height = 0;
+					swapChainDesc.Format = DXGI_FORMAT_B8G8R8A8_UNORM;
+					swapChainDesc.SampleDesc.Count = 1;
+					swapChainDesc.SampleDesc.Quality = 0;
+					swapChainDesc.BufferCount = 2;
+					swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL;
 
 					ComPtr<IDXGISwapChain1> swapChain;
 					hr = dxgiFactory->CreateSwapChainForCoreWindow(

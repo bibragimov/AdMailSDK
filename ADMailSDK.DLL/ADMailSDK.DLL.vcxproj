@@ -90,7 +90,7 @@
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>ADService.def</ModuleDefinitionFile>
-      <AdditionalDependencies>d2d1.lib;d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d2d1.lib;d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <HeaderFileName>%(Filename).h</HeaderFileName>
@@ -121,7 +121,7 @@
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>ADService.def</ModuleDefinitionFile>
-      <AdditionalDependencies>d2d1.lib;d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d2d1.lib;d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <HeaderFileName>%(Filename).h</HeaderFileName>
@@ -152,7 +152,7 @@
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>ADService.def</ModuleDefinitionFile>
-      <AdditionalDependencies>d2d1.lib;d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d2d1.lib;d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <HeaderFileName>%(Filename).h</HeaderFileName>
@@ -183,7 +183,7 @@
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>ADService.def</ModuleDefinitionFile>
-      <AdditionalDependencies>d2d1.lib;d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d2d1.lib;d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <HeaderFileName>%(Filename).h</HeaderFileName>
