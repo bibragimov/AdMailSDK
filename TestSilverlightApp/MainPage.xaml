@@ -8,7 +8,7 @@
                             Orientation="Portrait"
                             SupportedOrientations="Portrait"
                             mc:Ignorable="d">
-    <Grid Background="Azure">
+    <Grid>
         <view:AdControl VerticalAlignment="Top" />
     </Grid>
 </phone:PhoneApplicationPage>

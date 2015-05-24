@@ -13,7 +13,7 @@ namespace MyTargetSDK.WinRTP.View
         {
             InitializeComponent();
 
-            BannerViewModelFactory.GetObservable(TimeSpan.FromSeconds(3))
+            BannerViewModelFactory.GetObservable(TimeSpan.FromSeconds(30))
                                   .ObserveOnDispatcher()
                                   .Subscribe(model =>
                                              {
