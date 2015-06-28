@@ -199,6 +199,8 @@
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Models\Banners\IBanner.h" />
+    <ClInclude Include="Models\Stat.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>

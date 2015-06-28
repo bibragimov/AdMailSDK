@@ -21,6 +21,15 @@
     <Filter Include="PCH">
       <UniqueIdentifier>{e9d1aefe-9f51-4a38-9659-73ba328d91eb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Models">
+      <UniqueIdentifier>{69837d85-376a-4c5a-be1a-95a35fa7aead}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Models\Banners">
+      <UniqueIdentifier>{e600de1f-e879-4781-bfa7-e8acb791f516}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Models\Sections">
+      <UniqueIdentifier>{69cda778-800f-4a2d-b11c-f034f2230fe7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ADServiceImpl.cpp">
@@ -36,6 +45,12 @@
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>PCH</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\Banners\IBanner.h">
+      <Filter>Models\Banners</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\Stat.h">
+      <Filter>Models</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
